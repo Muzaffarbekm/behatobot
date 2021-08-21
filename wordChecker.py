@@ -19,10 +19,10 @@ def checker(word,words=words):
     
     return { "available": available ,"matches": matches }
 
-if __name__ == '__main__':
-    print(checkWord("ҳато"))
-    print(checkWord("тариҳ"))
-    print(checkWord("хато"))
-    print(checkWord("олма"))
-    print(checkWord("ҳат"))
-    print(checkWord("ҳайт"))
+# if __name__ == '__main__':
+#     print(checkWord("ҳато"))
+#     print(checkWord("тариҳ"))
+#     print(checkWord("хато"))
+#     print(checkWord("олма"))
+#     print(checkWord("ҳат"))
+#     print(checkWord("ҳайт"))
