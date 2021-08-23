@@ -1,0 +1,3 @@
+BOT_TOKEN = "1948544804:AAEg_ApXBsWzU5PCerncns-zVUGvuEn57SE"
+ADMINS = "172423241"
+# ip="localhost"
