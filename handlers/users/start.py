@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 @dp.message_handler(CommandStart(deep_link='https://t.me/helloworld0071'))
 async def welcome(message: types.Message):
     info = message.get_args()
-    text = f"Assalomu alaykum {message.from_user.full_name}!\n Siz Meni botim orqali qoshildizngiz!"   
+    text = f"Assalomu alaykum {message.from_user.full_name}!\n Siz {info} orqali qoshildizngiz!"   
     await message.reply(text)
     
     
@@ -28,7 +28,11 @@ async def welcome(message: types.Message):
     text = f"Assalomu alaykum {message.from_user.full_name}!\nBehato botiga xush kelibsiz"   
     await message.reply(text)
     
-    
+@dp.message_handler(content_types=types.ContentType.PHOTO)
+async def photo_handler(message: types.Message):
+    info = message.get_args()
+    text = f"Xurmatli {message.from_user.full_name}!\n Buni nimaligiga aniqlik kiritsak?"   
+    await message.reply(text)    
     
 @dp.message_handler()
 async def checkSpelling(message: types.Message):
