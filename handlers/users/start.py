@@ -15,13 +15,14 @@ logging.basicConfig(level=logging.INFO)
 
 # bot = Bot(token=BOT_TOKEN)
 # dp = Dispatcher(bot)
-@dp.message_handler(CommandStart(deep_link='https://t.me/helloworld0071'))
+
+@dp.message_handler(CommandStart(deep_link='hello'))
 async def welcome(message: types.Message):
     info = message.get_args()
     text = f"Assalomu alaykum {message.from_user.full_name}!\n Siz {info} orqali qoshildizngiz!"   
     await message.reply(text)
     
-    
+   
 @dp.message_handler(commands='start')
 async def welcome(message: types.Message):
     info = message.get_args()
